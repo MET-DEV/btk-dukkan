@@ -1,1 +1,12 @@
-<p>product-list works!</p>
+<div class="alert alert-primary" *ngIf="productAddedToCart===true" role="alert">
+  A simple primary alert—check it out!
+</div>
+<div *ngFor="let product of products" class="card" style="width: 18rem;">
+   
+    <div class="card-body">
+      <h5 class="card-title">{{product.name}}</h5>
+      <p class="card-text">{{product.name}}</p>
+      <a href="#" class="btn btn-primary" (click)="addToCart(product)">Go somewhere</a>
+    </div>
+  </div>
+  
